@@ -1,0 +1,324 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #09080f;
+    color: white;
+}
+
+header {
+    height: 80px;
+    padding: 0 8%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #3b275b;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo img {
+    width: 38px;
+    height: 38px;
+}
+
+.logo h1 {
+    font-size: 22px;
+}
+
+nav {
+    display: flex;
+    gap: 35px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.inicio {
+    min-height: 500px;
+    padding: 120px 8%;
+    background: #3b275b;
+}
+
+.inicio h1 {
+    font-size: 48px;
+    line-height: 1.15;
+    margin-bottom: 25px;
+}
+
+.inicio p {
+    max-width: 550px;
+    font-size: 17px;
+    line-height: 1.6;
+    margin-bottom: 35px;
+}
+
+.botao {
+    display: inline-block;
+    padding: 15px 25px;
+    background: #a052d2;
+    color: white;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.servicos,
+.sobre,
+.clientes,
+.contato {
+    padding: 90px 8%;
+}
+
+.titulo-pequeno {
+    color: #a052d2;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+h2 {
+    font-size: 38px;
+    margin: 12px 0 20px;
+}
+
+.descricao {
+    max-width: 700px;
+    line-height: 1.6;
+    color: #c5c0cc;
+}
+
+.lista-servicos {
+    margin-top: 45px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.card {
+    background: #2a2340;
+    padding: 30px;
+    min-height: 180px;
+}
+
+.card h3 {
+    font-size: 15px;
+    margin-bottom: 20px;
+}
+
+.card p {
+    color: #c5c0cc;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+.sobre {
+    background: #201b30;
+}
+
+.sobre-conteudo {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+    margin-top: 40px;
+}
+
+.sobre-conteudo h3 {
+    font-size: 18px;
+    line-height: 1.5;
+    margin-bottom: 25px;
+}
+
+.sobre-conteudo p {
+    color: #c5c0cc;
+    line-height: 1.6;
+    margin-bottom: 18px;
+}
+
+.imagem-sobre {
+    height: 350px;
+}
+
+.imagem-sobre img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.depoimentos {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    margin-top: 45px;
+}
+
+.depoimento {
+    background: #2a2340;
+    padding: 30px;
+}
+
+.depoimento img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+}
+
+.depoimento p {
+    color: #c5c0cc;
+    line-height: 1.6;
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+.depoimento strong {
+    font-size: 14px;
+}
+
+.contato {
+    background: #201b30;
+}
+
+.contato-conteudo {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    margin-top: 40px;
+}
+
+.imagem-contato {
+    min-height: 500px;
+}
+
+.imagem-contato img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+form h3 {
+    font-size: 22px;
+    margin-bottom: 12px;
+}
+
+form p {
+    color: #c5c0cc;
+    line-height: 1.5;
+    margin-bottom: 25px;
+}
+
+form label {
+    font-size: 13px;
+    margin-bottom: 8px;
+}
+
+form input,
+form textarea {
+    width: 100%;
+    padding: 13px;
+    margin-bottom: 18px;
+    border: 1px solid #574d69;
+    background: #2a2340;
+    color: white;
+}
+
+form textarea {
+    height: 100px;
+    resize: none;
+}
+
+form button {
+    width: 120px;
+    padding: 14px;
+    border: none;
+    background: #a052d2;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+footer {
+    padding: 60px 8% 25px;
+    background: #12101a;
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+    gap: 40px;
+}
+
+footer h4 {
+    font-size: 12px;
+    margin-bottom: 18px;
+}
+
+footer p {
+    color: #aaa5b2;
+    font-size: 13px;
+    margin-bottom: 10px;
+}
+
+footer small {
+    grid-column: 1 / -1;
+    padding-top: 30px;
+    border-top: 1px solid #2b2733;
+    color: #77727f;
+}
+
+@media (max-width: 700px) {
+
+    header {
+        padding: 20px;
+        height: auto;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    nav {
+        gap: 15px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .inicio {
+        padding: 80px 20px;
+    }
+
+    .inicio h1 {
+        font-size: 34px;
+    }
+
+    .servicos,
+    .sobre,
+    .clientes,
+    .contato {
+        padding: 60px 20px;
+    }
+
+    .lista-servicos,
+    .depoimentos,
+    .sobre-conteudo,
+    .contato-conteudo {
+        grid-template-columns: 1fr;
+    }
+
+    footer {
+        grid-template-columns: 1fr;
+        padding: 50px 20px 25px;
+    }
+}
