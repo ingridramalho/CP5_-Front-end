@@ -6,17 +6,17 @@
 
 body {
     font-family: Arial, sans-serif;
-    background: #09080f;
-    color: white;
+    background: #0b0910;
+    color: #f5f1fa;
 }
 
 header {
-    height: 80px;
-    padding: 0 8%;
+    min-height: 80px;
+    padding: 20px 8%;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background: #3b275b;
+    background: #38234f;
 }
 
 .logo {
@@ -28,6 +28,7 @@ header {
 .logo img {
     width: 38px;
     height: 38px;
+    object-fit: cover;
 }
 
 .logo h1 {
@@ -36,7 +37,7 @@ header {
 
 nav {
     display: flex;
-    gap: 35px;
+    gap: 30px;
 }
 
 nav a {
@@ -46,245 +47,282 @@ nav a {
 }
 
 .inicio {
-    min-height: 500px;
-    padding: 120px 8%;
-    background: #3b275b;
+    min-height: 400px;
+    padding: 60px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background: #3d2656;
 }
 
 .inicio h1 {
-    font-size: 48px;
-    line-height: 1.15;
-    margin-bottom: 25px;
+    font-size: 38px;
+    line-height: 1.2;
+    margin-bottom: 20px;
 }
 
 .inicio p {
     max-width: 550px;
-    font-size: 17px;
+    font-size: 14px;
     line-height: 1.6;
-    margin-bottom: 35px;
+    margin-bottom: 25px;
 }
 
-.botao {
-    display: inline-block;
-    padding: 15px 25px;
+.botao,
+form button {
+    border: none;
+    border-radius: 5px;
     background: #a052d2;
     color: white;
     text-decoration: none;
-    font-size: 13px;
-    font-weight: bold;
+    font-size: 12px;
+    padding: 13px 22px;
+    cursor: pointer;
 }
 
 .servicos,
 .sobre,
 .clientes,
 .contato {
-    padding: 90px 8%;
+    padding: 65px 8%;
+    text-align: center;
 }
 
 .titulo-pequeno {
-    color: #a052d2;
-    font-size: 12px;
-    font-weight: bold;
+    color: #b56be0;
+    font-size: 10px;
     letter-spacing: 2px;
+    font-weight: bold;
 }
 
 h2 {
-    font-size: 38px;
-    margin: 12px 0 20px;
+    font-size: 30px;
+    margin: 12px 0 18px;
 }
 
 .descricao {
-    max-width: 700px;
+    max-width: 650px;
+    margin: 0 auto;
+    color: #c3bdcb;
+    font-size: 13px;
     line-height: 1.6;
-    color: #c5c0cc;
 }
 
 .lista-servicos {
-    margin-top: 45px;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
+    gap: 15px;
+    margin-top: 35px;
 }
 
 .card {
-    background: #2a2340;
-    padding: 30px;
-    min-height: 180px;
+    background: #2d243b;
+    border-radius: 11px;
+    padding: 25px;
+    text-align: left;
+    min-height: 150px;
 }
 
 .card h3 {
-    font-size: 15px;
-    margin-bottom: 20px;
+    font-size: 12px;
+    margin-bottom: 15px;
 }
 
 .card p {
-    color: #c5c0cc;
-    font-size: 14px;
+    color: #c3bdcb;
+    font-size: 12px;
     line-height: 1.6;
 }
 
 .sobre {
-    background: #201b30;
+    background: #17121e;
 }
 
 .sobre-conteudo {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 60px;
     align-items: center;
-    margin-top: 40px;
+    gap: 35px;
+    margin-top: 30px;
+    text-align: left;
 }
 
 .sobre-conteudo h3 {
     font-size: 18px;
     line-height: 1.5;
-    margin-bottom: 25px;
+    margin-bottom: 20px;
 }
 
 .sobre-conteudo p {
-    color: #c5c0cc;
-    line-height: 1.6;
-    margin-bottom: 18px;
+    color: #c3bdcb;
+    font-size: 13px;
+    line-height: 1.7;
+    margin-bottom: 15px;
 }
 
 .imagem-sobre {
-    height: 350px;
+    height: 300px;
 }
 
 .imagem-sobre img {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    border-radius: 12px;
+}
+
+.clientes {
+    padding-bottom: 25px;
 }
 
 .depoimentos {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 25px;
-    margin-top: 45px;
+    gap: 15px;
+    margin-top: 30px;
 }
 
 .depoimento {
-    background: #2a2340;
-    padding: 30px;
+    background: #2d243b;
+    border-radius: 11px;
+    padding: 25px 20px;
+    text-align: center;
 }
 
 .depoimento img {
-    width: 60px;
-    height: 60px;
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
     border-radius: 50%;
-    margin-bottom: 20px;
+    margin-bottom: 15px;
 }
 
 .depoimento p {
-    color: #c5c0cc;
+    color: #e0d9e7;
+    font-size: 12px;
     line-height: 1.6;
-    font-size: 14px;
-    margin-bottom: 20px;
+    margin-bottom: 15px;
 }
 
 .depoimento strong {
-    font-size: 14px;
+    font-size: 12px;
 }
 
 .contato {
-    background: #201b30;
+    padding-top: 25px;
+    text-align: center;
 }
 
 .contato-conteudo {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 60px;
-    margin-top: 40px;
+    align-items: center;
+    gap: 25px;
+    max-width: 950px;
+    margin: 25px auto 0;
+    text-align: left;
 }
 
 .imagem-contato {
-    min-height: 500px;
+    height: 280px;
 }
 
 .imagem-contato img {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    border-radius: 11px;
 }
 
 form {
     display: flex;
     flex-direction: column;
+    padding: 20px;
+    background: #251b30;
+    border: 1px solid #75429a;
+    border-radius: 12px;
 }
 
 form h3 {
-    font-size: 22px;
-    margin-bottom: 12px;
+    color: #c17be7;
+    font-size: 18px;
+    margin-bottom: 10px;
 }
 
 form p {
-    color: #c5c0cc;
+    color: #c3bdcb;
+    font-size: 12px;
     line-height: 1.5;
-    margin-bottom: 25px;
+    margin-bottom: 15px;
 }
 
 form label {
-    font-size: 13px;
-    margin-bottom: 8px;
+    font-size: 12px;
+    margin-bottom: 7px;
 }
 
 form input,
 form textarea {
     width: 100%;
-    padding: 13px;
-    margin-bottom: 18px;
-    border: 1px solid #574d69;
-    background: #2a2340;
+    padding: 10px;
+    margin-bottom: 13px;
+    border: 1px solid #75429a;
+    border-radius: 3px;
+    background: #130f19;
     color: white;
+    font: inherit;
 }
 
 form textarea {
-    height: 100px;
-    resize: none;
+    height: 70px;
+    resize: vertical;
 }
 
 form button {
-    width: 120px;
-    padding: 14px;
-    border: none;
-    background: #a052d2;
-    color: white;
-    font-weight: bold;
-    cursor: pointer;
+    align-self: flex-start;
+    padding: 11px 20px;
 }
 
 footer {
-    padding: 60px 8% 25px;
-    background: #12101a;
+    padding: 40px 8% 20px;
+    background: #15101b;
+    border-top: 2px solid #1688d4;
     display: grid;
-    grid-template-columns: 2fr 1fr 1fr 1fr;
-    gap: 40px;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+    text-align: center;
+}
+
+footer .logo {
+    flex-direction: column;
+    justify-content: center;
 }
 
 footer h4 {
-    font-size: 12px;
-    margin-bottom: 18px;
+    color: #b56be0;
+    font-size: 10px;
+    letter-spacing: 1px;
+    margin-bottom: 15px;
 }
 
 footer p {
-    color: #aaa5b2;
-    font-size: 13px;
-    margin-bottom: 10px;
+    color: #c3bdcb;
+    font-size: 11px;
+    margin-bottom: 9px;
 }
 
 footer small {
     grid-column: 1 / -1;
-    padding-top: 30px;
-    border-top: 1px solid #2b2733;
-    color: #77727f;
+    padding-top: 20px;
+    border-top: 1px solid #302638;
+    color: #a59cac;
+    font-size: 11px;
 }
 
 @media (max-width: 700px) {
-
     header {
-        padding: 20px;
-        height: auto;
         flex-direction: column;
         gap: 20px;
     }
@@ -295,19 +333,8 @@ footer small {
         justify-content: center;
     }
 
-    .inicio {
-        padding: 80px 20px;
-    }
-
     .inicio h1 {
-        font-size: 34px;
-    }
-
-    .servicos,
-    .sobre,
-    .clientes,
-    .contato {
-        padding: 60px 20px;
+        font-size: 30px;
     }
 
     .lista-servicos,
@@ -317,8 +344,15 @@ footer small {
         grid-template-columns: 1fr;
     }
 
+    .sobre-conteudo {
+        text-align: center;
+    }
+
+    .imagem-contato {
+        height: 230px;
+    }
+
     footer {
         grid-template-columns: 1fr;
-        padding: 50px 20px 25px;
     }
 }
