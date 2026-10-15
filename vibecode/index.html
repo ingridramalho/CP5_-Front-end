@@ -1,11 +1,252 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>VibeCode</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#fffdf9">
+  <meta name="description" content="LUMI beauty: luz, beleza e autenticidade. Uma seleção conceitual de maquiagem para experimentar cores e texturas.">
+  <title>LUMI beauty — Luz, beleza e autenticidade</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <script src="js/script.js" defer></script>
 </head>
 <body>
+  <div class="announcement">
+    <p>Luz, beleza e autenticidade.</p>
+  </div>
 
+  <header class="site-header">
+    <div class="container header-main">
+      <a class="brand" href="#inicio" aria-label="LUMI beauty, página inicial">LUMI<span>beauty</span></a>
+
+      <form class="search" role="search" action="#produtos">
+        <label class="visually-hidden" for="site-search">Buscar produtos</label>
+        <input id="site-search" name="q" type="search" placeholder="O que você está procurando?">
+        <button type="submit" aria-label="Buscar">⌕</button>
+      </form>
+
+      <div class="header-actions">
+        <a class="account-link" href="#novidades">Novidades</a>
+        <button class="bag-button" type="button" aria-expanded="false" aria-controls="bag-panel">
+          Necessaire <span class="bag-count" aria-live="polite">0</span>
+        </button>
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="main-nav">
+          <span class="visually-hidden">Abrir menu</span>
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+
+    <section class="bag-panel" id="bag-panel" aria-labelledby="bag-title" hidden>
+      <div class="bag-panel-heading">
+        <h2 id="bag-title">Sua nécessaire</h2>
+        <button class="bag-close" type="button" aria-label="Fechar nécessaire">×</button>
+      </div>
+      <p class="bag-empty">Sua nécessaire está vazia. Adicione um produto para vê-lo aqui.</p>
+      <ul class="bag-items" aria-live="polite"></ul>
+      <div class="bag-summary" hidden>
+        <p><span>Subtotal ilustrativo</span><strong class="bag-subtotal"></strong></p>
+        <button class="bag-clear" type="button">Esvaziar nécessaire</button>
+      </div>
+      <p class="bag-disclaimer">Protótipo demonstrativo: nenhum pedido ou pagamento será realizado.</p>
+    </section>
+
+    <nav class="main-nav" id="main-nav" aria-label="Categorias">
+      <div class="container nav-links">
+        <a href="#produtos" data-nav-filter="todos">Todos</a>
+        <a href="#produtos" data-nav-filter="rosto">Rosto</a>
+        <a href="#produtos" data-nav-filter="olhos">Olhos</a>
+        <a href="#produtos" data-nav-filter="labios">Lábios</a>
+        <a href="#novidades">Inspiração</a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero container" id="inicio">
+      <div class="hero-copy">
+        <p class="eyebrow">Sua beleza, suas escolhas</p>
+        <h1>Coragem para ser <span>todas</span> as suas versões.</h1>
+        <p class="hero-description">
+          Texturas para brincar, cores para descobrir e maquiagem para usar do seu jeito.
+          Comece pelo que faz você se sentir bem.
+        </p>
+        <a class="button button-dark" href="#produtos">Explore a seleção <span aria-hidden="true">→</span></a>
+        <p class="hero-note">Uma vitrine-conceito para experimentar beleza sem regras.</p>
+      </div>
+
+      <div class="hero-visual">
+        <img
+          src="img/produtos-maquiagem.jpg"
+          alt="Maquiagem, pincéis e produtos em tons de coral sobre fundo claro"
+          fetchpriority="high">
+        <div class="hero-sticker" aria-hidden="true">
+          <span>MAKE</span>
+          <strong>your<br>rules</strong>
+        </div>
+        <p class="photo-credit">Imagem de campanha · consulte créditos em processo.md</p>
+      </div>
+    </section>
+
+    <section class="benefits" aria-label="Compromissos LUMI">
+      <div class="container benefit-list">
+        <p><span aria-hidden="true">✳</span> Escolha sem pressa</p>
+        <p><span aria-hidden="true">✳</span> Descubra novas cores</p>
+        <p><span aria-hidden="true">✳</span> Beleza no seu ritmo</p>
+      </div>
+    </section>
+
+    <section class="container products-section" id="produtos">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">Pequenas descobertas</p>
+          <h2>Favoritos para começar</h2>
+        </div>
+        <p>Uma seleção conceitual para montar sua rotina — ou sair dela.</p>
+      </div>
+
+      <div class="filter-list" role="group" aria-label="Filtrar produtos por categoria">
+        <button class="filter-button is-active" type="button" data-filter="todos" aria-pressed="true">Todos</button>
+        <button class="filter-button" type="button" data-filter="rosto" aria-pressed="false">Rosto</button>
+        <button class="filter-button" type="button" data-filter="olhos" aria-pressed="false">Olhos</button>
+        <button class="filter-button" type="button" data-filter="labios" aria-pressed="false">Lábios</button>
+      </div>
+
+      <div class="product-grid" id="product-grid">
+        <article class="product-card" data-category="rosto">
+          <div class="product-image">
+            <img src="img/campanha-beleza.jpg" alt="Paleta de maquiagem e blushes em tons quentes">
+            <span class="product-badge">Imagem ilustrativa</span>
+          </div>
+          <div class="product-info">
+            <div>
+              <p class="product-category">ROSTO · CORAL</p>
+              <h3>Blush Desperta</h3>
+            </div>
+            <p class="product-price">R$ 49,90</p>
+          </div>
+          <button class="add-button" type="button" data-product="Blush Desperta" data-price="49.90">Adicionar à nécessaire</button>
+        </article>
+
+        <article class="product-card" data-category="olhos">
+          <div class="product-image">
+            <img src="img/pinceis-e-cores.jpg" alt="Paleta com sombras em tons neutros, rosados e terrosos">
+            <span class="product-badge product-badge-soft">Imagem ilustrativa</span>
+          </div>
+          <div class="product-info">
+            <div>
+              <p class="product-category">OLHOS · 12 CORES</p>
+              <h3>Paleta Encontro</h3>
+            </div>
+            <p class="product-price">R$ 89,90</p>
+          </div>
+          <button class="add-button" type="button" data-product="Paleta Encontro" data-price="89.90">Adicionar à nécessaire</button>
+        </article>
+
+        <article class="product-card" data-category="labios">
+          <div class="product-image">
+            <img src="img/produtos-maquiagem.jpg" alt="Batom vermelho e produtos de maquiagem em fundo bege">
+            <span class="product-badge">Imagem ilustrativa</span>
+          </div>
+          <div class="product-info">
+            <div>
+              <p class="product-category">LÁBIOS · ACETINADO</p>
+              <h3>Batom Presença</h3>
+            </div>
+            <p class="product-price">R$ 39,90</p>
+          </div>
+          <button class="add-button" type="button" data-product="Batom Presença" data-price="39.90">Adicionar à nécessaire</button>
+        </article>
+      </div>
+      <p class="catalog-note" id="product-status" role="status" aria-live="polite" hidden></p>
+      <p class="catalog-note">Produtos e valores ilustrativos. Esta página é um protótipo, não uma loja real.</p>
+    </section>
+
+    <section class="story-section" id="novidades">
+      <div class="container story-grid">
+        <div class="story-image">
+          <img src="img/pinceis-e-cores.jpg" alt="Pincéis e cores de maquiagem em uma composição editorial" loading="lazy">
+        </div>
+        <div class="story-copy">
+          <p class="eyebrow">Espelho, espelho seu</p>
+          <h2>Não existe jeito certo. Existe o seu.</h2>
+          <p>
+            Um traço leve ou uma cor que chega antes de você. A maquiagem pode ser
+            ritual, brincadeira, expressão — ou simplesmente aquilo que deu vontade hoje.
+          </p>
+          <a class="text-link" href="#produtos">Encontre sua próxima cor <span aria-hidden="true">→</span></a>
+        </div>
+      </div>
+    </section>
+
+    <section class="beauty-gallery container" aria-labelledby="gallery-title">
+      <div class="gallery-heading">
+        <p class="eyebrow">Beleza sem molde</p>
+        <h2 id="gallery-title">Toda versão sua merece espaço.</h2>
+      </div>
+      <div class="gallery-grid">
+        <figure class="gallery-card">
+          <img
+            src="img/beleza-em-foco.jpg"
+            alt="Retrato editorial de uma mulher com maquiagem suave"
+            loading="lazy">
+          <figcaption>Leve, natural, do seu jeito.</figcaption>
+        </figure>
+        <figure class="gallery-card">
+          <img
+            src="img/rotina-de-beleza.jpg"
+            alt="Retrato de uma mulher com maquiagem e batom em tom rosado"
+            loading="lazy">
+          <figcaption>Um toque de cor também conta uma história.</figcaption>
+        </figure>
+      </div>
+      <p class="gallery-note">Retratos ilustrativos. Imagens de terceiros, sem vínculo com a marca fictícia LUMI beauty.</p>
+    </section>
+
+    <section class="newsletter container" aria-labelledby="newsletter-title">
+      <div>
+        <p class="eyebrow">Cartas de beleza</p>
+        <h2 id="newsletter-title">Uma dose de inspiração, de vez em quando.</h2>
+      </div>
+      <form class="newsletter-form">
+        <label class="visually-hidden" for="email">Seu e-mail</label>
+        <input id="email" name="email" type="email" placeholder="Seu melhor e-mail" required>
+        <button class="button button-dark" type="submit">Quero receber</button>
+      </form>
+      <p class="form-message" role="status" aria-live="polite"></p>
+      <p class="newsletter-note">Demonstração visual: o formulário não envia nem armazena seu e-mail.</p>
+    </section>
+  </main>
+
+  <footer class="site-footer" id="contato">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <a class="brand brand-footer" href="#inicio">LUMI<span>beauty</span></a>
+        <p>Luz, beleza e autenticidade. Encontre cores, texturas e novas formas de se expressar.</p>
+        <p class="footer-email-label">Fale com a gente</p>
+        <a class="footer-email" href="mailto:oi@lumibeauty.com.br">oi@lumibeauty.com.br</a>
+      </div>
+
+      <nav class="footer-column" aria-label="Categorias de maquiagem">
+        <h2>Explore</h2>
+        <a href="#produtos" data-nav-filter="todos">Todos os produtos</a>
+        <a href="#produtos" data-nav-filter="rosto">Maquiagem para rosto</a>
+        <a href="#produtos" data-nav-filter="olhos">Maquiagem para olhos</a>
+        <a href="#produtos" data-nav-filter="labios">Maquiagem para lábios</a>
+      </nav>
+
+      <nav class="footer-column" aria-label="Mais informações">
+        <h2>LUMI beauty</h2>
+        <a href="#novidades">Inspiração</a>
+        <a href="#newsletter-title">Cartas de beleza</a>
+        <a href="processo.md">Sobre este projeto</a>
+      </nav>
+    </div>
+    <div class="container footer-bottom">
+      <span>© 2026 LUMI beauty · Marca fictícia para fins educacionais</span>
+      <a href="processo.md">Ver processo e créditos das imagens</a>
+    </div>
+  </footer>
+
+  <div class="toast" role="status" aria-live="polite" aria-atomic="true"></div>
 </body>
 </html>
