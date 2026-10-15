@@ -12,6 +12,19 @@
     -webkit-text-fill-color: transparent;
     background-clip: text;
   }
+
+  .depoimento-indicadores [data-bs-target] {
+    width: 6px;
+    height: 6px;
+    margin: 0 2px;
+    border: 0;
+    border-radius: 50%;
+    background-color: #adb5bd;
+  }
+
+  .depoimento-indicadores .active {
+    background-color: #8C5A32;
+  }
 </style>
 
 </head>
@@ -83,9 +96,17 @@
             <div class="p-4">
               <p class="text-warning">★★★★★</p>
               <p class="fst-italic">
-                "Melhor café que já experimentei. Chega sempre fresquinho."
+                "Melhor café que já experimentei em assinatura. Chega sempre fresquinho."
               </p>
-              <strong>Marina Alves</strong>
+              <div class="d-flex justify-content-center align-items-center gap-2 mt-4">
+                <div class="rounded-circle flex-shrink-0"
+                  style="width: 40px; height: 40px; background-color: #A9895F;"
+                  aria-hidden="true"></div>
+                <div class="text-start">
+                  <strong class="d-block">Marina Alves</strong>
+                  <small class="text-secondary">Assinante desde 2023</small>
+                </div>
+              </div>
             </div>
           </div>
 
@@ -95,7 +116,15 @@
               <p class="fst-italic">
                 "Excelente qualidade e sabor. Recomendo!"
               </p>
-              <strong>Rafaella Rodriguês</strong>
+              <div class="d-flex justify-content-center align-items-center gap-2 mt-4">
+                <div class="rounded-circle flex-shrink-0"
+                  style="width: 40px; height: 40px; background-color: #A9895F;"
+                  aria-hidden="true"></div>
+                <div class="text-start">
+                  <strong class="d-block">Rafaella Rodriguês</strong>
+                  <small class="text-secondary">Cliente GrãoNobre</small>
+                </div>
+              </div>
             </div>
           </div>
 
@@ -105,20 +134,44 @@
               <p class="fst-italic">
                 "Adorei experimentar cafés de diferentes origens."
               </p>
-              <strong>Júlia Souza</strong>
+              <div class="d-flex justify-content-center align-items-center gap-2 mt-4">
+                <div class="rounded-circle flex-shrink-0"
+                  style="width: 40px; height: 40px; background-color: #A9895F;"
+                  aria-hidden="true"></div>
+                <div class="text-start">
+                  <strong class="d-block">Júlia Souza</strong>
+                  <small class="text-secondary">Cliente GrãoNobre</small>
+                </div>
+              </div>
             </div>
           </div>
 
         </div>
 
+        <div class="carousel-indicators depoimento-indicadores position-static mt-2 mb-0">
+          <button type="button" data-bs-target="#carouselDepoimentos"
+            data-bs-slide-to="0" class="active"
+            aria-current="true" aria-label="Depoimento de Marina Alves"></button>
+          <button type="button" data-bs-target="#carouselDepoimentos"
+            data-bs-slide-to="1"
+            aria-label="Depoimento de Rafaella Rodriguês"></button>
+          <button type="button" data-bs-target="#carouselDepoimentos"
+            data-bs-slide-to="2"
+            aria-label="Depoimento de Júlia Souza"></button>
+        </div>
+
         <button class="carousel-control-prev" type="button"
-          data-bs-target="#carouselDepoimentos" data-bs-slide="prev">
-          <span class="carousel-control-prev-icon bg-secondary rounded-circle"></span>
+          data-bs-target="#carouselDepoimentos" data-bs-slide="prev"
+          aria-label="Depoimento anterior">
+          <span class="d-block"
+            style="width: 12px; height: 12px; border-top: 1px solid #888; border-right: 1px solid #888; transform: rotate(225deg);"></span>
         </button>
 
         <button class="carousel-control-next" type="button"
-          data-bs-target="#carouselDepoimentos" data-bs-slide="next">
-          <span class="carousel-control-next-icon bg-secondary rounded-circle"></span>
+          data-bs-target="#carouselDepoimentos" data-bs-slide="next"
+          aria-label="Próximo depoimento">
+          <span class="d-block"
+            style="width: 12px; height: 12px; border-top: 1px solid #888; border-right: 1px solid #888; transform: rotate(45deg);"></span>
         </button>
       </div>
     </div>
