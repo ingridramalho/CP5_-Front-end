@@ -1,11 +1,247 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Grão Nobre</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GrãoNobre</title>
+
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+  >
+  
+<style>
+  .texto-degrade {
+    background: linear-gradient(#8C5A32);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+</style>
+
 </head>
 <body>
-    
+  <nav class="navbar navbar-expand-lg bg-dark navbar-dark">
+    <div class="container">
+      <a class="navbar-brand fw-bold" href="#inicio">
+      Grão<span class="texto-degrade">Nobre</span></a>
+
+      <button class="navbar-toggler" type="button"
+        data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto align-items-lg-center">
+          <li class="nav-item">
+            <a class="nav-link" href="#inicio">Início</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#depoimentos">Depoimentos</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#faq">FAQ</a>
+          </li>
+          <li class="nav-item ms-lg-2">
+            <button class="btn btn-sm text-white"
+              style="background-color: #79552f;"
+              data-bs-toggle="modal" data-bs-target="#modalCompra">
+              Comprar agora
+            </button>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <section id="inicio" class="bg-light py-5">
+    <div class="container">
+      <div class="row align-items-center g-4">
+        <div class="col-md-6">
+          <h1 class="display-5 fw-bold">
+            Café de origem, torrado com propósito.
+          </h1>
+          <p class="lead">
+            A GrãoNobre trabalha diretamente com pequenos produtores
+            para levar cafés especiais até você.
+          </p>
+        </div>
+
+        <div class="col-md-6">
+            <img src="img/Cafegraotorrado.jpeg" class="img-fluid rounded" alt="Café torrado">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="depoimentos" class="py-5 text-center">
+    <div class="container">
+      <p class="text-warning text-uppercase small mb-1">
+        Quem já experimentou
+      </p>
+      <h2 class="fw-bold mb-4">O que dizem nossos clientes</h2>
+
+      <div id="carouselDepoimentos" class="carousel slide">
+        <div class="carousel-inner">
+
+          <div class="carousel-item active">
+            <div class="p-4">
+              <p class="text-warning">★★★★★</p>
+              <p class="fst-italic">
+                "Melhor café que já experimentei. Chega sempre fresquinho."
+              </p>
+              <strong>Marina Alves</strong>
+            </div>
+          </div>
+
+          <div class="carousel-item">
+            <div class="p-4">
+              <p class="text-warning">★★★★★</p>
+              <p class="fst-italic">
+                "Excelente qualidade e sabor. Recomendo!"
+              </p>
+              <strong>Rafaella Rodriguês</strong>
+            </div>
+          </div>
+
+          <div class="carousel-item">
+            <div class="p-4">
+              <p class="text-warning">★★★★★</p>
+              <p class="fst-italic">
+                "Adorei experimentar cafés de diferentes origens."
+              </p>
+              <strong>Júlia Souza</strong>
+            </div>
+          </div>
+
+        </div>
+
+        <button class="carousel-control-prev" type="button"
+          data-bs-target="#carouselDepoimentos" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon bg-secondary rounded-circle"></span>
+        </button>
+
+        <button class="carousel-control-next" type="button"
+          data-bs-target="#carouselDepoimentos" data-bs-slide="next">
+          <span class="carousel-control-next-icon bg-secondary rounded-circle"></span>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <section id="faq" class="bg-light py-5">
+    <div class="container">
+      <h2 class="text-center fw-bold mb-4">
+        Perguntas frequentes
+      </h2>
+
+      <div class="accordion mx-auto" id="accordionFAQ">
+
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button collapsed"
+              type="button" data-bs-toggle="collapse"
+              data-bs-target="#resposta1">
+              Qual a validade do café após aberto?
+            </button>
+          </h2>
+          <div id="resposta1" class="accordion-collapse collapse"
+            data-bs-parent="#accordionFAQ">
+            <div class="accordion-body">
+              Após aberto, recomendamos consumir o café em até 30 dias
+              para preservar melhor seu aroma e sabor. Mantenha a embalagem
+              bem fechada, longe da luz, do calor e da umidade.
+            </div>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button collapsed"
+              type="button" data-bs-toggle="collapse"
+              data-bs-target="#resposta2">
+              Vocês entregam para todo o Brasil?
+            </button>
+          </h2>
+          <div id="resposta2" class="accordion-collapse collapse"
+            data-bs-parent="#accordionFAQ">
+            <div class="accordion-body">
+              Sim! Enviamos para todas as regiões do Brasil, com prazo médio de 3 a 7 dias úteis, dependendo da localidade.
+            </div>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button collapsed"
+              type="button" data-bs-toggle="collapse"
+              data-bs-target="#resposta3">
+              Posso cancelar minha assinatura quando quiser?
+            </button>
+          </h2>
+          <div id="resposta3" class="accordion-collapse collapse"
+            data-bs-parent="#accordionFAQ">
+            <div class="accordion-body">
+              Sim! Você pode cancelar sua assinatura quando quiser,
+              entrando em contato com nossa equipe de atendimento.
+
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <footer class="bg-dark text-white text-center py-3">
+    <small>© 2026 GrãoNobre. Todos os direitos reservados.</small>
+  </footer>
+
+  <div class="modal fade" id="modalCompra" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+
+        <div class="modal-header">
+          <h5 class="modal-title">Faça seu pedido:</h5>
+          <button type="button" class="btn-close"
+            data-bs-dismiss="modal"></button>
+        </div>
+
+        <div class="modal-body">
+          <div class="form-check mb-3">
+            <input class="form-check-input" type="checkbox" id="kit">
+            <label class="form-check-label" for="kit">
+              Kit de degustação
+            </label>
+          </div>
+
+          <div class="form-check mb-3">
+            <input class="form-check-input" type="checkbox" id="pacote1">
+            <label class="form-check-label" for="pacote1">
+              1 pacote de 250g
+            </label>
+          </div>
+
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" id="pacote5">
+            <label class="form-check-label" for="pacote5">
+              5 pacotes de 250g
+            </label>
+          </div>
+        </div>
+
+        <div class="modal-footer">
+          <button type="button" class="btn btn-primary"
+            data-bs-dismiss="modal">
+            Ir para o carrinho
+          </button>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
 </body>
 </html>
