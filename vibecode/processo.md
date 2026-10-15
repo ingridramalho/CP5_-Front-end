@@ -11,7 +11,7 @@ Este arquivo organiza o processo por etapas. Os detalhes ficam separados por ass
 3. **Conceito:** criar a marca fictícia LUMI beauty e definir público, tom de voz e objetivo.
 4. **Direção visual:** escolher paleta, tipografia, fotografia e organização das seções antes de finalizar a implementação.
 5. **Implementação:** organizar conteúdo, estilos, interações e imagens em arquivos separados.
-6. **Revisão crítica:** identificar o que era fictício, evitar promessas de compra/envio reais, documentar os limites das fotografias e melhorar o painel da nécessaire para listar os produtos adicionados.
+6. **Revisão crítica:** identificar o que era fictício, evitar promessas de compra/envio reais, documentar os limites das fotografias, melhorar o painel da nécessaire para listar os produtos adicionados e aplicar brilho no hover do título e efeito 3D na imagem principal.
 7. **Validação:** conferir sintaxe, caminhos locais, âncoras e documentação; registrar os testes visuais que ainda precisam ser feitos manualmente.
 
 ## Documentos do processo
